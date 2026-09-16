@@ -83,6 +83,8 @@
                     <div class="resumen-item-info">
                         <p>Producto 1</p>
                         <p class="precio">$10000</p>
+                        <label>Cantidad: <input type="number" id="cantidad1" class="input-cantidad" value="1" min="1"></label>
+                        <p id="subtotal1">Subtotal: $10000</p>
                     </div>
                 </div>
 
@@ -91,6 +93,8 @@
                     <div class="resumen-item-info">
                         <p>Producto 2</p>
                         <p class="precio">$15000</p>
+                        <label>Cantidad: <input type="number" id ="cantidad2" class="input-cantidad" value="1" min="1"></label>
+                        <p id="subtotal2">Subtotal: $15000</p>
                     </div>
                 </div>
 
@@ -126,6 +130,33 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        let inputProd1 = document.getElementById("cantidad1");
+        let textoSubtotal1 = document.getElementById("subtotal1");
+
+        let inputProd2 = document.getElementById("cantidad2");
+        let textoSubtotal2 = document.getElementById("subtotal2");
+
+        inputProd1.addEventListener("input", function() {
+        let cantidad = inputProd1.value; // Agarramos el número que el usuario escribió
+        let precio = 10000; // El precio fijo de este producto
+        
+        let nuevoSubtotal = cantidad * precio; // Hacemos la matemática
+        
+        // Lo mostramos en la pantalla modificando el texto
+        textoSubtotal1.innerText = "Subtotal: $" + nuevoSubtotal; 
+
+        inputProd2.addEventListener("input", function() {
+        let cantidad = inputProd2.value; // Agarramos el número que el usuario escribió
+        let precio = 15000; // El precio fijo de este producto
+        
+        let nuevoSubtotal = cantidad * precio; // Hacemos la matemática
+        
+        // Lo mostramos en la pantalla modificando el texto
+        textoSubtotal2.innerText = "Subtotal: $" + nuevoSubtotal; 
+});
+});
+    </script>
 
 </body>
 </html>
