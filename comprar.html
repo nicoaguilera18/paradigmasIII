@@ -98,6 +98,14 @@
                     </div>
                 </div>
 
+                <div class="cupon">
+                    <label for="codigoCupon">Código de descuento:</label>
+                    <input type="text" id="codigoCupon" placeholder="Ingresá tu cupón">
+                    <button id="btnValidarCupon" type="button">Aplicar</button>
+                    <p id="mensajeCupon"></p>
+                </div>
+
+
                 <p class="resumen-total">Total: $25000</p>
             </aside>
         </section>
@@ -138,24 +146,39 @@
         let textoSubtotal2 = document.getElementById("subtotal2");
 
         inputProd1.addEventListener("input", function() {
-        let cantidad = inputProd1.value; // Agarramos el número que el usuario escribió
-        let precio = 10000; // El precio fijo de este producto
-        
-        let nuevoSubtotal = cantidad * precio; // Hacemos la matemática
-        
-        // Lo mostramos en la pantalla modificando el texto
-        textoSubtotal1.innerText = "Subtotal: $" + nuevoSubtotal; 
+            let cantidad = inputProd1.value;
+            let precio = 10000;
+            let nuevoSubtotal = cantidad * precio;
+            textoSubtotal1.innerText = "Subtotal: $" + nuevoSubtotal;
+        });
 
         inputProd2.addEventListener("input", function() {
-        let cantidad = inputProd2.value; // Agarramos el número que el usuario escribió
-        let precio = 15000; // El precio fijo de este producto
-        
-        let nuevoSubtotal = cantidad * precio; // Hacemos la matemática
-        
-        // Lo mostramos en la pantalla modificando el texto
-        textoSubtotal2.innerText = "Subtotal: $" + nuevoSubtotal; 
-});
-});
+            let cantidad = inputProd2.value;
+            let precio = 15000;
+            let nuevoSubtotal = cantidad * precio;
+            textoSubtotal2.innerText = "Subtotal: $" + nuevoSubtotal;
+        });
+
+        const btnValidarCupon = document.getElementById('btnValidarCupon');
+        const inputCupon = document.getElementById('codigoCupon');
+        const mensajeCupon = document.getElementById('mensajeCupon');
+
+        function validarCupon() {
+            const codigo = inputCupon.value.trim().toUpperCase();
+
+            if (codigo === "") {
+                mensajeCupon.innerText = "Por favor, ingrese un código";
+                mensajeCupon.className = "mensaje-error";
+            } else if (codigo === "UCP10") {
+                mensajeCupon.innerText = "¡Cupón aplicado! Tenés un 10% de descuento";
+                mensajeCupon.className = "mensaje-exito";
+            } else {
+                mensajeCupon.innerText = "Código inválido o vencido";
+                mensajeCupon.className = "mensaje-error";
+            }
+        }
+
+        btnValidarCupon.addEventListener('click', validarCupon);
     </script>
 
 </body>
