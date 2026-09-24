@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cine - Tienda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Cine - Tienda</h1>
+  </header>
+
+  <main>
+    <div class="filtros">
+      <input type="text" id="busqueda" placeholder="Buscar producto...">
+      <select id="categoria">
+        <option value="todas">Todas las categorías</option>
+        <option value="Entradas">Entradas</option>
+        <option value="Kiosco">Kiosco</option>
+      </select>
+    </div>
+
+    <section id="productos" class="grid">
+      <p>Cargando productos...</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

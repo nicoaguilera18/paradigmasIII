@@ -1,0 +1,8 @@
+[
+  { "id": 1, "titulo": "Entrada General Cine", "precio": 4000, "categoria": "Entradas" },
+  { "id": 2, "titulo": "Combo Pochoclos + Gaseosa", "precio": 3200, "categoria": "Kiosco" },
+  { "id": 3, "titulo": "Entrada Sala VIP 3D", "precio": 6000, "categoria": "Entradas" },
+  { "id": 4, "titulo": "Pochoclos Grandes", "precio": 2500, "categoria": "Kiosco" },
+  { "id": 5, "titulo": "Entrada VIP 2D", "precio": 5000, "categoria": "Entradas" },
+  { "id": 6, "titulo": "Gaseosa 500 ml", "precio": 1800, "categoria": "Kiosco" }
+]
