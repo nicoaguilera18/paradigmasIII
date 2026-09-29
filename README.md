@@ -1,6 +1,0 @@
-# Ecommerce 
-# AE1: Paradígmas y Lenguajes de Programación III
-# Proyecto de FRONT-END base de E-Commerce
-# Integrante:
-# -Aguilera Danese Leandro Nicolas-
-
