@@ -26,16 +26,16 @@ body {
 }
 
 .celda {
-    background-color: #e2e8f0;   /* gris claro */
-    border: none;                /* sin borde negro */
-    border-radius: 8px;          /* esquinas redondeadas */
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 8px; /* esquinas redondeadas */
     font-size: 2rem;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .celda:hover {
-    background-color: #cbd5e0;   /* un gris más oscuro al pasar el mouse */
+    background-color: #cbd5e0;   /* gris más oscuro al pasar el mouse */
 }
 
 .btn {
@@ -43,7 +43,7 @@ body {
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
-    background: #3182ce;
+    background: #d51d1d;
     color: white;
     border: none;
     border-radius: 6px;
